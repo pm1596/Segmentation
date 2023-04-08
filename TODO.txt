@@ -4,10 +4,10 @@ A leading women’s fashion retailer in the US has around 80 stores. Its main cu
 
 Challenges that need to be tackled:
 
-(1)	Missing values- Due to data inconsistency, some transactions might have missing revenue information in purchase data
-(2)	Inconsistent data- Data formats, values, type of data could have issues / errors and may not always be clean. Methods to identify such anomalies and tackle the same need to be thought about.
-(3)	Outliers- An outlier is an observation that appears to deviate significantly from other observations in the data. An outlier may indicate bad data which may have been coded incorrectly or is due to a random variation. Hence, for some customers sales might appear unusual which needs to be treated before analysis
-(4)	Segmentation- Commonly used methods of segmentation are K-means, hierarchical etc
+DONE(1)	Missing values- Due to data inconsistency, some transactions might have missing revenue information in purchase data
+DONE(2)	Inconsistent data- Data formats, values, type of data could have issues / errors and may not always be clean. Methods to identify such anomalies and tackle the same need to be thought about.
+DONE(3)	Outliers- An outlier is an observation that appears to deviate significantly from other observations in the data. An outlier may indicate bad data which may have been coded incorrectly or is due to a random variation. Hence, for some customers sales might appear unusual which needs to be treated before analysis
+DONE(4)	Segmentation- Commonly used methods of segmentation are K-means, hierarchical etc
 
 Data Description
 1. Purchase Data – Last 1-year purchase details at customer-product level. 
@@ -37,6 +37,7 @@ ________________________________________________________________________________
 Answer the following using R/ Python/ SQL:
 
 1.	Aggregate the revenue and quantity at customer level for relevant time period along with the reason of time period selection
+- MOnthly and quarterly
 2.	Detect the Outliers in the Quantity and revenue for each customer/transaction and apply an outlier treatment on the same. Specify the outlier treatment technique
  
  - Winsorization - In this technique, the extreme values are replaced with the next highest or lowest non-extreme value. For example, if we have a dataset with values ranging from 1 to 100 and an outlier value of 200, then the outlier value can be replaced with the value of 100 (i.e., the next highest non-extreme value).
@@ -44,7 +45,14 @@ Answer the following using R/ Python/ SQL:
 3.	Check the data for missing values and apply the missing value treatment by imputing the missing values by either mean or median or any other value. Also provide the reasoning for the missing value treatment method used
 4.	Segment the customer using a relevant segmentation technique. Also, specify the reason behind choosing the algorithm
 5.	Give an appropriate description to each segment and explain the characteristics of customers belonging to those segments
+-   Segment 1: High spenders who make frequent purchases and have made purchases recently.
+    Segment 2: Low spenders who make infrequent purchases and have not made purchases recently.
+    Segment 3: Medium spenders who make purchases occasionally and have made purchases somewhat recently.
+    
+   The characteristics of customers in each segment would depend on the specific values of the features that were used to cluster the data. For example, in segment 1, the customers would have high lifetime monetary values, high lifetime frequency values, and recent lifetime recency values. They could be described as loyal, high-value customers who make frequent purchases. In segment 2, the customers would have low lifetime monetary values, low lifetime frequency values, and low lifetime recency values. They could be described as low-value customers who make infrequent purchases. In segment 3, the customers would have medium lifetime monetary values, medium lifetime frequency values, and somewhat recent lifetime recency values. They could be described as occasional customers who make purchases from time to time.
+____________________________________________________________________________________________________________________
 
+Remains
 Submit the following:
 1.	PowerPoint presentation briefing the assumptions made, techniques used, reasoning / logic for approach & method selected, intermediate and final results
 2.	Separate Code for each of the above questions (with proper comments), input and output files
