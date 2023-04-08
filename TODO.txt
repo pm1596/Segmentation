@@ -1,0 +1,73 @@
+Problem Statement
+
+A leading women’s fashion retailer in the US has around 80 stores. Its main customer targeting happens through mailed catalogs the conversion of which is less than 1%. It aims to streamline its promotion strategy by targeting the right customer groups to improve conversion. Given the customer and purchase data, you need to segment these customers based on their purchase history.
+
+Challenges that need to be tackled:
+
+(1)	Missing values- Due to data inconsistency, some transactions might have missing revenue information in purchase data
+(2)	Inconsistent data- Data formats, values, type of data could have issues / errors and may not always be clean. Methods to identify such anomalies and tackle the same need to be thought about.
+(3)	Outliers- An outlier is an observation that appears to deviate significantly from other observations in the data. An outlier may indicate bad data which may have been coded incorrectly or is due to a random variation. Hence, for some customers sales might appear unusual which needs to be treated before analysis
+(4)	Segmentation- Commonly used methods of segmentation are K-means, hierarchical etc
+
+Data Description
+1. Purchase Data – Last 1-year purchase details at customer-product level. 
+2. Customer Data – Customer history including details around their lifetime spend, frequency, mailing details etc.
+
+
+customer data - Customer ID,Date,Product,Units,Amount,Cost,Channel,Store          
+purchase data - Customer ID,Mail Deliverable,Lifetime Recency,Lifetime Frequency,Lifetime Monetary,Closest store distance
+
+
+From the given customer and purchase data, some of the features that can be created are:
+
+    Recency: Number of days since the customer's last purchase
+    Frequency: Number of times a customer has made a purchase
+    Monetary value: Total amount spent by the customer
+    Average order value: Average amount spent per order
+    Purchase channel: Channel through which the purchase was made (online or in-store)
+    Customer lifetime value: Predicted total value a customer will bring to the company over the course of their relationship with the brand
+    Customer segmentation: Grouping customers based on their behavior and characteristics, such as high-value customers, loyal customers, new customers, etc.
+    Campaign response rate: Percentage of customers who respond to the catalog mailers
+    Distance to store: Distance between the customer's location and the nearest physical store location
+    Purchase history: Information about the types of products purchased, the frequency of purchase, the seasonality of purchase, etc.
+
+
+_______________________________________________________________________________________________
+
+Answer the following using R/ Python/ SQL:
+
+1.	Aggregate the revenue and quantity at customer level for relevant time period along with the reason of time period selection
+2.	Detect the Outliers in the Quantity and revenue for each customer/transaction and apply an outlier treatment on the same. Specify the outlier treatment technique
+
+3.	Check the data for missing values and apply the missing value treatment by imputing the missing values by either mean or median or any other value. Also provide the reasoning for the missing value treatment method used
+4.	Segment the customer using a relevant segmentation technique. Also, specify the reason behind choosing the algorithm
+5.	Give an appropriate description to each segment and explain the characteristics of customers belonging to those segments
+
+Submit the following:
+1.	PowerPoint presentation briefing the assumptions made, techniques used, reasoning / logic for approach & method selected, intermediate and final results
+2.	Separate Code for each of the above questions (with proper comments), input and output files
+3.	Please submit all files as a zip file
+a.	Every code file should be named as “Code_<question number>”
+b.	Every input file (csv / txt / xls / rda / py) should be named as “Input_<question number>_<file number>” {<file number> can be 1,2 and so on depending on number of input files}
+c.	Every output file (csv / txt / xls / rda / py) should be named as “Output_<question number>_<file number>” {<file number> can be 1,2 and so on depending on number of output files}
+d.	Single power-point file should be submitted with one section for each question listed above
+
+_________________________________________________________________________________________________________________________
+
+Solution - 
+
+To segment customers based on their purchase history, we can use customer segmentation techniques such as RFM analysis, K-means clustering, or hierarchical clustering. These techniques can help identify groups of customers with similar purchase behavior and preferences.
+
+RFM analysis involves analyzing three key metrics:
+
+    Recency: How recently a customer has made a purchase
+    Frequency: How often a customer makes purchases
+    Monetary: How much a customer spends on purchases
+
+By analyzing these three metrics, we can segment customers into different groups based on their purchase behavior. For example, customers who have made a purchase recently and frequently, and have spent a large amount, can be categorized as high-value customers. Similarly, customers who have not made a purchase in a long time, have low frequency, and low monetary value, can be categorized as low-value customers.
+
+K-means clustering is a popular unsupervised machine learning algorithm that can be used to cluster customers based on their purchase behavior. It involves grouping customers based on similarity in their purchase behavior, such as the frequency and recency of their purchases.
+
+Hierarchical clustering is another clustering technique that can be used to segment customers based on their purchase history. It involves creating a hierarchy of clusters, where each cluster is a group of customers with similar purchase behavior.
+
+Once we have identified different customer segments based on their purchase behavior, we can tailor our promotion and marketing strategies to target these segments more effectively. For example, we can offer personalized discounts and promotions to high-value customers to encourage them to make repeat purchases, or target customers who have not made a purchase in a long time with special offers to incentivize them to shop again.
