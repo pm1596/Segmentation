@@ -38,7 +38,9 @@ Answer the following using R/ Python/ SQL:
 
 1.	Aggregate the revenue and quantity at customer level for relevant time period along with the reason of time period selection
 2.	Detect the Outliers in the Quantity and revenue for each customer/transaction and apply an outlier treatment on the same. Specify the outlier treatment technique
-
+ 
+ - Winsorization - In this technique, the extreme values are replaced with the next highest or lowest non-extreme value. For example, if we have a dataset with values ranging from 1 to 100 and an outlier value of 200, then the outlier value can be replaced with the value of 100 (i.e., the next highest non-extreme value).
+ 
 3.	Check the data for missing values and apply the missing value treatment by imputing the missing values by either mean or median or any other value. Also provide the reasoning for the missing value treatment method used
 4.	Segment the customer using a relevant segmentation technique. Also, specify the reason behind choosing the algorithm
 5.	Give an appropriate description to each segment and explain the characteristics of customers belonging to those segments
