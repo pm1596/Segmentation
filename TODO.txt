@@ -43,14 +43,40 @@ Answer the following using R/ Python/ SQL:
  - Winsorization - In this technique, the extreme values are replaced with the next highest or lowest non-extreme value. For example, if we have a dataset with values ranging from 1 to 100 and an outlier value of 200, then the outlier value can be replaced with the value of 100 (i.e., the next highest non-extreme value).
  
 3.	Check the data for missing values and apply the missing value treatment by imputing the missing values by either mean or median or any other value. Also provide the reasoning for the missing value treatment method used
+- Refer EDA and data section in code
+
 4.	Segment the customer using a relevant segmentation technique. Also, specify the reason behind choosing the algorithm
+- Kmeans -> simple, fast, and scalable algorithm that can handle large datasets
+            -> In the context of customer segmentation, k-means is effective because it allows businesses to group customers with similar purchasing behavior into distinct segments. By doing so, businesses can tailor their marketing and promotional strategies to each segment to improve customer engagement and increase revenue
+            -> Furthermore, k-means is easy to interpret and visualize, making it a popular choice for businesses that want to understand their customers' behavior and preferences. It also allows for easy comparison between different clusters and can be used for predictive modeling to identify potential high-value customers or to forecast future sales.
+
 5.	Give an appropriate description to each segment and explain the characteristics of customers belonging to those segments
--   Segment 1: High spenders who make frequent purchases and have made purchases recently.
-    Segment 2: Low spenders who make infrequent purchases and have not made purchases recently.
-    Segment 3: Medium spenders who make purchases occasionally and have made purchases somewhat recently.
-    
-   The characteristics of customers in each segment would depend on the specific values of the features that were used to cluster the data. For example, in segment 1, the customers would have high lifetime monetary values, high lifetime frequency values, and recent lifetime recency values. They could be described as loyal, high-value customers who make frequent purchases. In segment 2, the customers would have low lifetime monetary values, low lifetime frequency values, and low lifetime recency values. They could be described as low-value customers who make infrequent purchases. In segment 3, the customers would have medium lifetime monetary values, medium lifetime frequency values, and somewhat recent lifetime recency values. They could be described as occasional customers who make purchases from time to time.
-____________________________________________________________________________________________________________________
+
+- cluster 0 -> Low Lifetime Monetary, Low Lifetime Frequency, and High Lifetime Recency
+            -> Customers in this cluster have a low purchasing power and make infrequent purchases. 
+            -> They are price-sensitive and often look for discounts and deals
+            -> Promotions that offer discounts, special deals, and free samples can be effective in attracting these customers and increasing revenue
+            
+ - cluster 1 -> High Lifetime Monetary, High Lifetime Frequency, and Low Lifetime Recency
+             -> Customers in this cluster have a high purchasing power and make frequent purchases - Providing them with early access to new products or limited-time offers to create a sense of exclusivity and urgency.
+             -> They are less sensitive to price and value quality over price - Offering free shipping or other perks to encourage them to make larger purchases.
+             -> Promotions that focus on quality products, loyalty programs, and referral incentives can be effective in retaining these customers and increasing revenue
+             
+ - cluster 2 -> A bit higher Lifetime Monetary, Low Lifetime Frequency, Low Lifetime Recency
+             -> Customers in this cluster have purchasing power but are of conservative nature-Increase frequency: Encourage customers to make repeat purchases by offering loyalty programs, discounts, and promotions on subsequent purchases.
+             -> Increase recency: Encourage customers to make purchases more frequently by reminding them about the benefits of the product and the promotions that are currently available
+             -> They are sensitive to price, lookout for something valuable for longterm in good amount, not too high - Personalized marketing: Use personalized marketing campaigns to target specific customer segments with tailored messaging and promotions.
+             -> Seasonal sale, discounts banners, catalouges can be useful in increasing revenue -Targeted promotions: Offer targeted promotions to customers based on their past purchase history and preferences to increase their likelihood of making a purchase.
+             
+ - cluster 3 -> Low Lifetime Monetary, High Lifetime Frequency, Low Lifetime Recency 
+             -> focus should be on increasing the Lifetime Monetary value
+             -> offering incentives for customers to spend more, such as discounts on higher value purchases or rewards for reaching certain spending milestones
+             -> targeted marketing campaigns could be used to encourage customers to try higher priced products or to purchase complementary items to increase their overall spend
+             -> It may also be beneficial to offer loyalty programs or other incentives to customers in this cluster to encourage repeat purchases and increase their Lifetime Recency value
+             -> This could help to build a stronger relationship with these customers and increase the likelihood of them becoming high value customers over time
+             
+             
+________________________________________________________________________________________________________________
 
 Remains
 Submit the following:
